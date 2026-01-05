@@ -1,8 +1,10 @@
 @import "tailwindcss";
 
 @theme {
-  --color-background: #5A9CB5; 
-  --color-foreground: #FA6868;
+  --color-background: #0f1418; 
+  --color-foreground: #f5f7f8;
+  --color-primary: #F4CE14;
+  --color-shadeone: #1B2024
 
 }
 
@@ -13,9 +15,17 @@
 
   body{
     background-color: var(--color-background);
-    color: var(--color-forground);
-    font-family: "Courier New", Courier, monospace;
+    color: var(--color-foreground);
+    font-family: "inter", sans-serif;
 
   }
+
+@layer components {
+  .navigate{
+    background-color: var(--color-shadeone);
+    opacity: 0.5;
+    backdrop-filter: 15px;
+  }
+}
 
 }
