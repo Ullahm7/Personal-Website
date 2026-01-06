@@ -5,7 +5,10 @@ export const Hero = () => {
             <div class ="p-4 border-2 border-yellow-300 items-center">
                 {/*Title*/}
                 <div class="border-2 border-yellow-300 h-10 mb-2 px-2">
-                    <span class ="w-2 h-2 bg-shadeone rounded-full p-1">Software Engineer</span>
+                    <span class ="w-2 h-2 bg-shadeone rounded-full p-2 pr-3">
+                        <span class="w-2 h-2 rounded-full  bg-yellow-300 inline-flex mb-0.75 mr-2 animate-pulse "></span>
+                        <span>Software Engineer</span>
+                    </span>
                 </div>
                 {/*Name*/}
                 <div class="border-2 border-yellow-300 h-16 mb-2 px-2 text-2xl font-bold">
