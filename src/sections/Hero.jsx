@@ -5,14 +5,14 @@ export const Hero = () => {
             <div class ="p-4 border-2 border-yellow-300 items-center">
                 {/*Title*/}
                 <div class="border-2 border-yellow-300 h-10 mb-2 px-2">
-        
+                    <span class ="w-2 h-2 bg-shadeone rounded-full p-1">Software Engineer</span>
                 </div>
                 {/*Name*/}
                 <div class="border-2 border-yellow-300 h-16 mb-2 px-2 text-2xl font-bold">
 
                 </div>
                 {/*Description*/}
-                <div>
+                <div class ="border-2 border-yellow-300 h-16 mb-2">
 
                 </div>
                 {/*Download CV*/}
@@ -25,7 +25,7 @@ export const Hero = () => {
                 </div>
             </div>
             {/*right column*/}
-            <div class="border-2 border-yellow-300 p-8 flex justify-center border-2 border-teal-400">
+            <div class="border-2 border-yellow-300 p-8 flex justify-center">
 
             </div>
         </div>
