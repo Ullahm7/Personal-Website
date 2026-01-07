@@ -8,6 +8,11 @@
 
 }
 
+@font-face {
+  font-family:'superpixel';
+  src: url(/public/SuperPixel-m2L8j.ttf);
+}
+
 @layer base{
   html{
     scroll-behavior: smooth;
@@ -25,6 +30,12 @@
     background-color: var(--color-shadeone);
     opacity: 0.5;
     backdrop-filter: 15px;
+  }
+}
+
+@layer utilities{
+  .font-superpixel{
+    font-family: "superpixel",monospace;
   }
 }
 
