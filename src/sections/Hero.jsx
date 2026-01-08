@@ -35,7 +35,7 @@ export const Hero = () => {
                 </div>
                 {/*dev used*/}
                 <div class="border-2 border-yellow-300 h-5 mt-2">
-                    <p class="text-xs text-gray-600">Developed using React + Tailwindcss</p>
+                    <p class="text-xs text-gray-600">Developed using React + Tailwindcss + Lucide</p>
                 </div>
             </div>
             {/*right column*/}
