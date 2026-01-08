@@ -1,4 +1,4 @@
-import {ArrowRight, Download} from "lucide-react";
+import {ArrowRight, Download, Github, Linkedin} from "lucide-react";
 
 export const Hero = () => {
     return <section class="min-h-screen flex items-center overflow-hidden pt-20 ">
@@ -13,7 +13,7 @@ export const Hero = () => {
                     </span>
                 </div>
                 {/*Name*/}
-                <div class="border-2 border-yellow-300 h-fit mb-2 px-2 font-bold  ">
+                <div class="border-2 border-yellow-300 h-fit mb-2 px-2 font-bold">
                     <h1 class="text-5xl md:text-6xl lg:text-7xl ">Muhammad Ullah</h1>
                 </div>
                 {/*Description*/}
@@ -28,16 +28,19 @@ export const Hero = () => {
                         Download CV
                     </span>
                     {/* add links here (git, linkdin,notion,itch?*/}
-                    <img class="h-7" src="/public/Notion_app_logo.png"/>
+                    <img class="h-7 mt-2 mr-2 mb-2 ml-3" src="/Notion_app_logo.png"/>
+                    <Github class="h-7 m-2"/>
+                    <Linkedin class="h-7 m-2"/>
+                    
                 </div>
-                {/*Links*/}
-                <div>
-
+                {/*dev used*/}
+                <div class="border-2 border-yellow-300 h-5 mt-2">
+                    <p class="text-xs text-gray-600">Developed using React + Tailwindcss</p>
                 </div>
             </div>
             {/*right column*/}
-            <div class="border-2 border-yellow-300 p-8 flex justify-center">
-
+            <div class="border-2 border-yellow-300 flex justify-center">
+                <img class="h-auto rounded-2xl" src="/profilepic.jpg"/>
             </div>
         </div>
         
