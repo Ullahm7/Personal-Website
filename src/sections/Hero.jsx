@@ -40,7 +40,7 @@ export const Hero = () => {
             </div>
             {/*right column*/}
             <div class="border-2 border-yellow-300 flex justify-center">
-                <img class="h-auto rounded-2xl" src="/profilepic.jpg"/>
+                <img class="h-auto rounded-2xl w-full aspect-[4/5]" src="/Penelope-Hunter-Side-profile-face-800-x-600.webp"/>
             </div>
         </div>
         
