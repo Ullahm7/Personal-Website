@@ -28,7 +28,7 @@ export const Projects = () => {
         <div class="text-center mx-auto max-w-3xl border-2 border-yellow-300 overflow-hidden md:row-span-1">
             <span class="text-sm font-medium uppercase text-yellow-300">Featured Work</span>
             <h1 class="text-4xl md:text-5xl font-bold text-yellow-300 mt-4 mb-6 ">Projects that <span class="italic font-normal text-white">make a impact</span></h1>
-            <p> A selection of my recent work, from complex web applications to innovative tools that solve real-world problems.</p>
+            <p class="pb-10"> A selection of my recent work, from complex web applications to innovative tools that solve real-world problems.</p>
             <div class="grid md:grid-cols-2 gap-8">
                 {projects.map((project, idx) =>(
                  <div key = {idx} class="group rounded-2xl md:row-span-1"> 
