@@ -1,5 +1,7 @@
 import { Navbar } from './layout/Navbar'
+import { Footer } from './layout/Footer'
 import { Hero } from './sections/Hero'
+import { About } from './sections/About'
 import { Projects } from './sections/Projects'
 import { Experience } from './sections/Experience'
 
@@ -9,9 +11,11 @@ function App() {
       <Navbar />
       <main>
         <Hero />
+        <About />
         <Projects />
         <Experience />
       </main>
+      <Footer />
     </div>
   )
 }

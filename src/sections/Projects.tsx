@@ -1,88 +1,130 @@
-import { ArrowUpRight } from 'lucide-react'
+import { ArrowUpRight, ImageOff } from 'lucide-react'
+import { motion } from 'framer-motion'
+import { fadeUp, staggerContainer, staggerItem, viewportOnce } from '../lib/motion'
 
 interface Project {
   title: string
+  path: string
   description: string
-  image: string
+  image: string | null
   tags: string[]
   link: string
-  github: string
 }
 
 const projects: Project[] = [
   {
-    title: 'Fintech Dashboard',
+    title: 'Analytics Dashboard',
+    path: 'projects/dashboard',
     description:
-      'A comprehensive finacial analytics platform with real-time data visualization, profolio managment, and high process images.',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. A real-time analytics platform with interactive charts and reporting.',
     image: '/analyticdashboard.png',
-    tags: ['React', 'Typescript', 'Node.js'],
+    tags: ['React', 'TypeScript', 'Node.js'],
     link: '#',
-    github: '#',
   },
   {
-    title: 'yeggor',
+    title: 'Portfolio Tracker',
+    path: 'projects/tracker',
     description:
-      'A comprehensive finacial analytics platform with real-time data visualization, profolio managment, and high process images.',
+      'Sed do eiusmod tempor incididunt ut labore et dolore. A dark-mode financial tracker with custom data visualizations.',
     image: '/blackanalyticdashboard.webp',
-    tags: ['React', 'Typescript', 'Node.js'],
+    tags: ['Next.js', 'PostgreSQL', 'Docker'],
     link: '#',
-    github: '#',
+  },
+  {
+    title: 'Untitled Project',
+    path: 'projects/coming-soon',
+    description:
+      'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip. Case study write-up coming soon.',
+    image: null,
+    tags: ['Python', 'AWS'],
+    link: '#',
   },
 ]
 
 export const Projects = () => {
   return (
-    <section className="min-h-screen flex  overflow-hidden pt-20 border-2 border-yellow-300">
-      {/* text at the top */}
-      <div className="text-center mx-auto max-w-3xl border-2 border-yellow-300 overflow-hidden md:row-span-1">
-        <span className="text-sm font-medium uppercase text-yellow-300">
-          Featured Work
+    <section id="projects" className="py-24 px-6">
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
+        viewport={viewportOnce}
+        variants={fadeUp}
+        className="max-w-5xl mx-auto"
+      >
+        <span className="font-mono text-xs text-secondary">
+          // featured_work
         </span>
-        <h1 className="text-4xl md:text-5xl font-bold text-yellow-300 mt-4 mb-6 ">
-          Projects that <span className="italic font-normal text-white">make a impact</span>
-        </h1>
-        <p className="pb-10">
-          {' '}
-          A selection of my recent work, from complex web applications to
-          innovative tools that solve real-world problems.
+        <h2 className="text-3xl md:text-4xl font-semibold tracking-tight mt-3 mb-4">
+          Projects that <span className="text-primary">make an impact</span>
+        </h2>
+        <p className="text-muted max-w-lg mb-12">
+          A selection of recent work, from full-stack applications to tools
+          built to solve real problems.
         </p>
-        <div className="grid md:grid-cols-2 gap-8">
-          {projects.map((project, idx) => (
-            <div key={idx} className="group rounded-2xl md:row-span-1">
-              <div className="relative overflow-hidden aspect-video">
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 "
-                />
-                {/* links */}
-                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <a href={project.link} className="p-3 rounded-full navigate">
-                    <ArrowUpRight />
-                  </a>
+
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={viewportOnce}
+          variants={staggerContainer}
+          className="grid md:grid-cols-2 gap-6"
+        >
+          {projects.map((project) => (
+            <motion.a
+              variants={staggerItem}
+              whileHover={{ y: -6 }}
+              transition={{ duration: 0.25, ease: [0.16, 1, 0.3, 1] }}
+              href={project.link}
+              key={project.title}
+              className="group terminal-frame flex flex-col hover:border-primary/60"
+            >
+              <div className="terminal-bar">
+                <span className="terminal-dot bg-secondary" />
+                <span className="terminal-dot bg-primary" />
+                <span className="terminal-dot bg-accent" />
+                <span className="terminal-path truncate">{project.path}</span>
+              </div>
+
+              <div className="relative aspect-video overflow-hidden bg-surface-2">
+                {project.image ? (
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  />
+                ) : (
+                  <div className="w-full h-full flex flex-col items-center justify-center gap-2 text-muted">
+                    <ImageOff size={22} />
+                    <span className="font-mono text-xs">image placeholder</span>
+                  </div>
+                )}
+                <div className="absolute top-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity">
+                  <span className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-primary text-on-primary">
+                    <ArrowUpRight size={16} />
+                  </span>
                 </div>
               </div>
-              {/* Content */}
-              <div className="border-2 border-yellow-300 p-6 space-y-4">
-                <h3 className="text-xl font-semibold text-yellow-300">
-                  {project.title}
-                </h3>
-                <p className="text-gray-600 text-sm">{project.description}</p>
-                <div className="flex flex-wrap gap-2 items-center justify-center">
-                  {project.tags.map((tag, tagIdx) => (
+
+              <div className="p-5 flex-1 flex flex-col gap-3">
+                <h3 className="font-semibold">{project.title}</h3>
+                <p className="text-sm text-muted leading-relaxed">
+                  {project.description}
+                </p>
+                <div className="flex flex-wrap gap-2 mt-auto pt-2">
+                  {project.tags.map((tag) => (
                     <span
-                      key={tagIdx}
-                      className="px-4 py-1.5 rounded-full text-xs font-medium bg-[var(--color-shadeone)] hover:border-2 border-yellow-300"
+                      key={tag}
+                      className="font-mono text-[11px] px-2.5 py-1 rounded-full bg-surface-2 text-muted"
                     >
                       {tag}
                     </span>
                   ))}
                 </div>
               </div>
-            </div>
+            </motion.a>
           ))}
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
     </section>
   )
 }
