@@ -17,7 +17,7 @@
     "jsx": "react-jsx",
 
     /* Path alias to match vite.config.ts */
-    "baseUrl": ".",
+  
     "paths": {
       "@/*": ["./src/*"]
     },
