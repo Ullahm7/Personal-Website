@@ -20,6 +20,11 @@
      e.g. buttons. Stays dark in both themes since primary is always bright. */
   --color-on-primary: #14181d;
 
+  /* Splash/intro screen colors — intentionally fixed regardless of
+     light/dark theme, since it's a one-time brand moment. */
+  --color-splash: #f4ce14;
+  --color-on-splash: #14181d;
+
   /* Type */
   --font-display: "Space Grotesk", sans-serif;
   --font-sans: "Inter", sans-serif;
@@ -143,4 +148,10 @@
   .cursor::after {
     animation: none;
   }
+}
+
+/* Applied to <body> by CustomCursor when a fine pointer is detected */
+body.custom-cursor-active,
+body.custom-cursor-active * {
+  cursor: none !important;
 }
