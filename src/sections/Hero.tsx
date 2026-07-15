@@ -21,13 +21,11 @@ export const Hero = () => {
           </motion.h1>
 
           <motion.p variants={staggerItem} className="font-mono text-sm text-secondary mt-3">
-            // Software Engineer<span className="cursor" />
+            // Biomedical & Software Engineer<span className="cursor" />
           </motion.p>
 
           <motion.p variants={staggerItem} className="text-muted mt-6 max-w-md leading-relaxed">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua, ut
-            enim ad minim veniam quis nostrud exercitation.
+            Welcome to my personal portfolio! I am a passionate biomedical and software engineer dedicated to creating innovative solutions that bridge the gap between technology and healthcare. Explore my projects, skills, and experiences as I strive to make a positive impact in the world of tech.
           </motion.p>
 
           <motion.div variants={staggerItem} className="flex flex-wrap items-center gap-3 mt-8">
@@ -77,7 +75,7 @@ export const Hero = () => {
           </motion.div>
 
           <motion.p variants={staggerItem} className="font-mono text-xs text-muted mt-10">
-            built with react + tailwindcss + typescript
+            built with React + Tailwindcss + Framer Motion
           </motion.p>
         </div>
 

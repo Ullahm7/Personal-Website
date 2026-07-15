@@ -7,21 +7,43 @@ interface Fact {
 }
 
 const facts: Fact[] = [
-  { label: 'location', value: 'Toronto, CA' },
-  { label: 'role', value: 'Software Engineer' },
-  { label: 'focus', value: 'Web & Systems' },
-  { label: 'status', value: 'Open to work' },
+  { label: 'Location', value: 'Milton, ONT' },
+  { label: 'Role', value: 'Biomedical and Software Engineer' },
+  { label: 'Sport', value: 'Cycling' },
+  { label: 'Hobby', value: 'Chess' },
 ]
 
 const skills: string[] = [
   'TypeScript',
-  'React',
-  'Node.js',
-  'PostgreSQL',
   'Python',
-  'AWS',
+  'Java',
+  'Javascript',
+  'C',
+  'C#',
+  'C++',
+  'SQL',
+  'Verilog',
+  'HTML',
+  'CSS',
+  'Bash',
+  'Git',
+  'Matlab',
+  'Maven',
   'Docker',
-  'GraphQL',
+  'Azure',
+  'Figma',
+  'Canva',
+  'Excel',
+  'Flask',
+  'Django',
+  'FastAPI',
+  'Vert.x',
+  'React',
+  'Selenium',
+  'MySQL',
+  'PostgreSQL',
+  'SQLite',
+  '.NET',
 ]
 
 export const About = () => {
@@ -36,7 +58,7 @@ export const About = () => {
       >
         <span className="font-mono text-xs text-secondary">// about_me</span>
         <h2 className="text-3xl md:text-4xl font-semibold tracking-tight mt-3 mb-12">
-          A little about <span className="text-primary">how I work</span>
+          A little about <span className="text-primary">who I am</span>
         </h2>
 
         <motion.div
@@ -69,16 +91,10 @@ export const About = () => {
           {/* bio + skills */}
           <motion.div variants={staggerItem} className="md:col-span-3 flex flex-col gap-8">
             <p className="text-muted leading-relaxed">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat.
+              I'm a currently working as a biomedical and software engineer at McMaster University and I was always passionate in learning new things ever since I was a kid. From actively pushing my elo rating on Chess.com to beating my current best time for solving a rubix cube, I always strive to improve myself and learn new things. I am also a big fan of cycling and I love to explore new places on my bike.
             </p>
             <p className="text-muted leading-relaxed">
-              Duis aute irure dolor in reprehenderit in voluptate velit esse
-              cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-              cupidatat non proident, sunt in culpa qui officia deserunt
-              mollit anim id est laborum.
+              Programming has always been a passion of mine and I have been programming since I was 12 years old (Thank you, The Coding Train!). From joining multiple clubs to meeting new individuals finding design solutions, I am constanly looking for new opportunities and connections with people along the way.
             </p>
 
             <div>
