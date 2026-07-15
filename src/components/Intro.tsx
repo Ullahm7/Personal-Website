@@ -6,9 +6,9 @@ interface IntroProps {
 }
 
 const WORD = 'Welcome'
-const LETTER_DELAY = 0.12 // seconds between each letter starting
-const LETTER_DURATION = 0.45 // seconds for a single letter's entrance
-const HOLD_MS = 650 // pause once fully spelled out, before it slides away
+const LETTER_DELAY = 0.12 
+const LETTER_DURATION = 0.45 
+const HOLD_MS = 650 
 
 const letterVariants: Variants = {
   hidden: { opacity: 0, y: 24 },

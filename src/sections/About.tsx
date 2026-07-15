@@ -7,7 +7,7 @@ interface Fact {
 }
 
 const facts: Fact[] = [
-  { label: 'Location', value: 'Milton, ONT' },
+  { label: 'Location', value: 'Milton, ON' },
   { label: 'Role', value: 'Biomedical and Software Engineer' },
   { label: 'Sport', value: 'Cycling' },
   { label: 'Hobby', value: 'Chess' },

@@ -5,7 +5,7 @@ const INTERACTIVE_SELECTOR =
   'a, button, input, textarea, select, label, [role="button"], [data-cursor-hover]'
  
 const BASE_SIZE = 14
-const HOVER_SIZE = 21 // 1.5x base
+const HOVER_SIZE = 21 
 const HOVER_OPACITY = 0.6
  
 function isPointerFineAndMotionOk() {

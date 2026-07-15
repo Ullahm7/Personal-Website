@@ -1,8 +1,12 @@
+import { useState } from 'react'
 import { Download, Github, Linkedin } from 'lucide-react'
-import { motion } from 'framer-motion'
+import { AnimatePresence, motion } from 'framer-motion'
 import { fadeUp, staggerContainer, staggerItem } from '../lib/motion'
-
+import { ResumeTerminal } from '../components/ResumeTerminal'
+ 
 export const Hero = () => {
+  const [showResume, setShowResume] = useState(false)
+ 
   return (
     <section className="min-h-screen flex items-center pt-28 pb-16 px-6">
       <motion.div
@@ -19,25 +23,30 @@ export const Hero = () => {
           >
             Muhammad Ullah
           </motion.h1>
-
+ 
           <motion.p variants={staggerItem} className="font-mono text-sm text-secondary mt-3">
             // Biomedical & Software Engineer<span className="cursor" />
           </motion.p>
-
+ 
           <motion.p variants={staggerItem} className="text-muted mt-6 max-w-md leading-relaxed">
-            Welcome to my personal portfolio! I am a passionate biomedical and software engineer dedicated to creating innovative solutions that bridge the gap between technology and healthcare. Explore my projects, skills, and experiences as I strive to make a positive impact in the world of tech.
+            Welcome to my personal portfolio! I am a passionate biomedical and
+            software engineer dedicated to creating innovative solutions that
+            bridge the gap between technology and healthcare. Explore my
+            projects, skills, and experiences as I strive to make a positive
+            impact in the world of tech.
           </motion.p>
-
+ 
           <motion.div variants={staggerItem} className="flex flex-wrap items-center gap-3 mt-8">
-            <motion.a
+            <motion.button
+              type="button"
               whileHover={{ y: -2 }}
               whileTap={{ scale: 0.96 }}
-              href="/resume.pdf"
+              onClick={() => setShowResume(true)}
               className="inline-flex items-center gap-2 bg-primary text-on-primary font-medium text-sm px-5 py-3 rounded-full hover:bg-accent transition-colors"
             >
               <Download size={16} />
               Download CV
-            </motion.a>
+            </motion.button>
             <motion.a
               whileHover={{ y: -2 }}
               whileTap={{ scale: 0.96 }}
@@ -46,7 +55,7 @@ export const Hero = () => {
             >
               View Projects
             </motion.a>
-
+ 
             <div className="flex items-center gap-1 ml-2">
               <a
                 href="https://github.com/Ullahm7"
@@ -58,14 +67,14 @@ export const Hero = () => {
                 <Github size={18} />
               </a>
               <a
-                href="#"
+                href="https://www.linkedin.com/in/muhammad-ullah-m7/"
                 aria-label="LinkedIn"
                 className="p-2.5 rounded-full text-muted hover:text-foreground hover:bg-surface-2 transition-colors"
               >
                 <Linkedin size={18} />
               </a>
               <a
-                href="#"
+                href="https://spiral-wire-e12.notion.site/Muhammad-Ullah-91bd7a00890a43dbb3fe4e6706863cd0"
                 aria-label="Notion"
                 className="p-2.5 rounded-full text-muted hover:text-foreground hover:bg-surface-2 transition-colors"
               >
@@ -73,12 +82,12 @@ export const Hero = () => {
               </a>
             </div>
           </motion.div>
-
+ 
           <motion.p variants={staggerItem} className="font-mono text-xs text-muted mt-10">
             built with React + Tailwindcss + Framer Motion
           </motion.p>
         </div>
-
+ 
         {/* right column — signature terminal-chrome image frame */}
         <motion.div variants={fadeUp} className="relative">
           <div className="absolute -inset-6 bg-primary/10 blur-3xl rounded-full -z-10" />
@@ -90,13 +99,19 @@ export const Hero = () => {
               <span className="terminal-path">profile.png</span>
             </div>
             <img
-              src="/profilepic.jpg"
+              src="/ME.png"
               alt="Muhammad Ullah"
               className="w-full aspect-[4/5] object-cover"
             />
           </div>
         </motion.div>
       </motion.div>
+ 
+      <AnimatePresence>
+        {showResume && (
+          <ResumeTerminal key="resume-terminal" onClose={() => setShowResume(false)} />
+        )}
+      </AnimatePresence>
     </section>
   )
 }

@@ -79,7 +79,7 @@ const projects: Project[] = [
     title: 'Validation of a Portable Membrane Oxygenator Analysis',
     path: 'projects/Validation-of-a-Portable-Membrane-Oxygenator-Analysis',
     description:
-      'A regression-modeling assignment predicting DEVICELOSS (gas-transfer efficiency loss) in a portable membrane oxygenator from benchtop test data. 70/30 train/test split (fixed random state) and a full pairplot/correlation analysis to identify the predictor most linearly associated with the response',
+      'A regression-modeling assignment predicting DEVICELOSS (gas-transfer efficiency loss) in a portable membrane oxygenator from benchtop test data. 70/30 train/test split (fixed random state) and a full pairplot/correlation analysis to identify the predictor most linearly associated with the response.',
     image: '/deviceloss.png',
     tags: ['Python', 'Jupyter', 'Numpy', 'Matplotlib', 'Seaborn', 'Statsmodels', 'Anova', 'Scikit-learn'],
     link: 'https://github.com/Ullahm7/Statistical-Methods-Biomedical-Engineering',
@@ -154,7 +154,7 @@ export const Projects = () => {
           // featured_work
         </span>
         <h2 className="text-3xl md:text-4xl font-semibold tracking-tight mt-3 mb-4">
-          Projects that <span className="text-primary">make an impact</span>
+          Projects that <span className="text-primary">I have created</span>
         </h2>
         <p className="text-muted max-w-lg mb-12">
           A selection of recent work, from full-stack applications to tools
